@@ -1,0 +1,185 @@
+baseURL: https://wangdongxing.com
+languageCode: zh-cn
+title: 往东行
+theme: PaperModNew
+enableInlineShortcodes: true
+enableEmoji: true # 允许使用 Emoji 表情，建议 true
+enableRobotsTXT: true # 允许爬虫抓取到搜索引擎，建议 true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+paginate: 6    # 首页每页显示的文章数
+summaryLength: 120 # 文章概览的自字数，默认70
+# Site settings
+languageCode: "zh-cn"
+# 网站有 CJK 字符（中日韩统一表意文字），设置 hasCJKLanguage: true 
+hasCJKLanguage: true 
+timezone: "Asia/Shanghai"
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+permalinks: # 访问博客时网址的显示形式
+  post: "/:title/"
+  # post: "/:year/:month/:day/:title/"
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: 产品
+          url: pm/
+          weight: 5
+        - name: 分析
+          url: analytics/
+          weight: 7
+        - name: 阅读
+          url: reading/
+          weight: 6
+        - name: 生活
+          url: life/
+          weight: 10
+        - name: 归类
+          url: archives/
+          weight: 18
+        - name: 标签
+          url: tags/
+          weight: 19
+        - name: 搜索
+          url: search/
+          weight: 20
+        - name: 关于
+          url: about/
+          weight: 21
+        - name: 友链
+          url: links/
+          weight: 22          
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 这里的参数会被代码以 .Site.Params 的形式读取
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "西有真经，我往东行。"
+  author: wangdongxing
+  defaultTheme: auto  # defaultTheme: light or  dark
+  disableThemeToggle: false
+  DateFormat: "2006-01-02"
+  ShowShareButtons: true
+  disableSpecialistPost: false
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowWordCounts: true
+  ShowReadingTime: false
+  ShowLastMod: true #显示文章更新时间
+  ShowAllPagesInArchive: true
+  disableSpecial1stPost: false
+  ShowToc: true # 显示目录
+  TocOpen: true # 自动展开目录
+  autonumbering: true # 自动加编号
+  mainSections:
+  - pm
+  - analytics
+  - reading
+  - life
+
+  # profileMode:
+  #     enabled: false
+  #     title: PaperMod
+      # imageUrl: "#"
+      # imageTitle: my image
+      # imageWidth: 120
+      # imageHeight: 120
+      # buttons:
+      #     - name: Archives
+      #       url: archives
+      #     - name: Tags
+      #       url: tags
+
+  homeInfoParams:
+      Title: "Hi there 👋"
+      Content: 
+        <ul><li>Welcome to my blog ✨</li>
+        <li>I will share my work 👨🏻‍💻 and life 🏖 notes here.</li>
+        <li></li>
+        <li>西有真经，我往东行。</li>
+        <li>博学慎思，明辨笃行。更多介绍可见：<a href="/about/">关于</a></li>
+        </ul>
+ 
+  socialIcons:
+    - name: email
+      url: "mailto:idxing@qq.com"
+    - name: RSS
+      url: "index.xml"
+
+  label: # 左上角图标
+    text: "往东行"
+    # icon: "img/favicon.ico"
+    # iconHeight: 25
+
+  assets:
+    favicon: "img/favicon.ico"
+    favicon16x16: "img/favicon-16x16.png"
+    favicon32x32: "img/favicon-32x32.png"
+    apple_touch_icon: "img/apple-touch-icon.png"
+    safari_pinned_tab: "img/apple-touch-icon.png"
+
+  cover:
+      hidden: true # hide everywhere but not in structured data
+      hiddenInList: true # hide on list pages and home
+      hiddenInSingle: true # hide on single page
+
+  # editPost:
+  #     URL: "https://github.com/<path_to_repo>/content"
+  #     Text: "Edit" # edit text
+  #     appendFilePath: true # to append file path to Edit link
+
+  fuseOpts: # 搜索配置
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: [ "title", "permalink", "summary", "content"]
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # HUGO 默认转义 Markdown 文件中的 HTML 代码，如需开启的话
+  highlight:
+    style: monokai
+    codeFences: true
+    guessSyntax: true
+    noClasses: true
+    tabWidth: 2
+    lineNumbersInTable: true #：使用表来格式化行号和代码,而不是 标签。这个属性一般设置为 true.
+    # codeFences: true
+    # hl_Lines: true #高亮的行号，一般这个不设置，因为每个代码块我们可能希望让高亮的地方不一样
+    # anchorLineNos: true
+    # lineNoStart: true #行号从编号几开始，一般从 1 开始。
+    # lineNos: true  # 是否显示行号，我比较喜欢显示，所以我设置的为 true.
+    # noClasses: true #：使用 class 标签，而不是内嵌的内联样式
+
+  # twikoo评论
+  # twikoo:
+  #   version: 1.5.8 # 填写twikoo版本号
+  #   id:  # 填写自己的twikoo id
+  #   region:  # 环境地域，默认为 ap-shanghai，如果您的环境地域不是上海，需传此参数，请看twikoo官方文档
