@@ -19,7 +19,6 @@ ShowToc: false
 {{<friend name="Keyle's Blog" url="https://vrast.cn/" logo="https://vrast.cn/uploads/WX20190313-093822.png" word="记录一些偶尔冒出来转眼就会忘的灵感">}}
 {{<friend name="磊磊落落" url="https://leileiluoluo.com/" logo="https://leileiluoluo.com/images/favicon.png" word="浩然的个人博客，用于记录生活和分享技术">}}
 {{<friend name="陈仓颉" url="https://imzm.im/" logo="https://imzm.im/wp-content/uploads/2021/01/cropped-bloglogo-180x180.png" word="以有涯随无涯">}}
-{{<friend name="CG艺术实验室" url="https://cgartlab.com" logo="https://cgartlab.com/wp-content/uploads/2024/09/cgartlab-icon.gif" word="数字艺术 / 视觉设计 / 技术分享 / 知识管理">}}
 {{<friend name="康丰日志" url="https://okang.top/" logo="https://okang.top/wp-content/uploads/2025/03/logo.jpg" word="心情随笔，也会收集一些网上好玩的东西">}}
 {{<friend name="Vei Blog" url="https://blog.veitzn.top" logo="https://img.veitzn.top/img/VeiLogoN.webp" word="松窗竹户，万千潇洒">}}
 
